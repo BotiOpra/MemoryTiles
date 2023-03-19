@@ -1,0 +1,24 @@
+﻿<Page x:Class="MemoryTilesGame.Views.GameMenuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MemoryTilesGame.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="GameMenuPage">
+
+    <Grid Background="White">
+        <WrapPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <WrapPanel.Resources>
+                <Style TargetType="local:MenuButton">
+                    <Setter Property="Margin" Value="0, 5" />
+                </Style>
+            </WrapPanel.Resources>
+            <local:MenuButton x:Name="newGameBtn" Text="Start New Game" Click="newGameBtn_Click"/>
+            <local:MenuButton x:Name="loadGameBtn" Text="Load Game"/>
+            <local:MenuButton x:Name="statsBtn" Text="Statistics" NavUri="/Views/GameStatisticsPage.xaml"/>
+            <local:MenuButton x:Name="quitBtn" Text="Quit Game"/>
+        </WrapPanel>
+    </Grid>
+</Page>
